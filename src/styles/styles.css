@@ -105,6 +105,68 @@ html {
   padding: 0;
 }
 
+.sign-in-content {
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #fff;
+  width: 300px;
+  height: 360px;
+  margin: 0 auto;
+  margin-top: 48px;
+  padding: 32px;
+}
+
+.sign-in-content h1 {
+  padding: 20px 0 20px 0;
+}
+
+.sign-in-content .input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.sign-in-content .input-wrapper label {
+  font-weight: bold;
+}
+
+.sign-in-content .input-wrapper input {
+  padding: 8px;
+  font: size 19.2px;
+}
+
+.sign-in-content .input-remember {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 7px;
+          column-gap: 7px;
+  margin-left: 4px;
+}
+
+.sign-in-content .sign-in-button {
+  text-decoration: underline;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-size: 17.6px;
+  font-weight: bold;
+  margin-top: 16px;
+  border-color: #00bc77;
+  background-color: #00bc77;
+  color: #fff;
+}
+
 .hero {
   background-image: url("../assets/img/banktree.jpeg");
   background-position: 0 -431px;

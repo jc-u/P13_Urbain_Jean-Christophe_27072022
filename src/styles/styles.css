@@ -498,8 +498,8 @@ html {
 }
 
 .header-modifier .modifier-container {
-  margin: 21.5px 0 21.5px 0;
-  width: 500px;
+  margin: 21.5px auto;
+  width: 75%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   display: -webkit-box;
@@ -532,7 +532,7 @@ html {
   display: none;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1024px) {
   .header {
     color: #fff;
     margin-bottom: 32px;

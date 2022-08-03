@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import SignInPage from "./pages/SignIn";
-import UserPage from "./pages/User";
+import User from "./pages/User";
 
 const App = () => {
 
@@ -10,7 +10,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/sign-in" element={<SignInPage />} />
-        <Route path="/user" element={<UserPage />} />
+        <Route path="/user" element={<User />} />
       </Routes>
     </BrowserRouter>
   );

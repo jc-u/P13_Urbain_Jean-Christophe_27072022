@@ -3,11 +3,22 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Account from "../components/Account";
 import UserHeader from "../components/UserHeader";
-
-const firstNameUser = "Username";
-const lastNameUser = "Lastname"
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchOrUpdateUser } from "../redux/features/getUser";
+import { selectToken } from "../redux/utils/selectors";
+import { selectUser } from "../redux/utils/selectors";
 
 const User = () => {
+  const token = useSelector(selectToken);
+  const user = useSelector(selectUser);
+  console.log(user);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchOrUpdateUser(token));
+  }, [dispatch, token]);
+  const firstNameUser = user.data?.body.firstName;
+  const lastNameUser = user.data?.body.lastName;
   return (
     <div className="user-page">
       <Header firstNameUser={firstNameUser} />

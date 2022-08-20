@@ -1,5 +1,5 @@
-import { selectToken } from "../utils/selectors";
-import { createSlice, createAction } from "@reduxjs/toolkit";
+import { selectEditedNames } from "../utils/selectors";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   status: "void",
@@ -7,21 +7,22 @@ const initialState = {
   error: null,
 };
 
-export function fetchOrUpdateToken(identifiers) {
+export function sendEditedUserNames(token, editedUserNames) {
   return async (dispatch, getState) => {
-    const status = selectToken(getState()).status;
+    const status = selectEditedNames(getState()).status;
 
     if (status === "pending" || status === "updating") {
       return;
     }
     dispatch(actions.fetching());
     try {
-      const response = await fetch("http://localhost:3001/api/v1/user/login", {
-        method: "POST",
+      const response = await fetch("http://localhost:3001/api/v1/user/profile", {
+        method: "PUT",
         headers: {
           "Content-Type": "application/json",
+          Authorization: "Bearer" + token.data?.body.token,
         },
-        body: JSON.stringify(identifiers),
+        body: JSON.stringify(editedUserNames),
       });
       const data = await response.json();
       dispatch(actions.resoldved(data));
@@ -32,7 +33,7 @@ export function fetchOrUpdateToken(identifiers) {
 }
 
 const { actions, reducer } = createSlice({
-  name: "token",
+  name: "editedNames",
   initialState,
   reducers: {
     fetching: (draft) => {
@@ -68,15 +69,7 @@ const { actions, reducer } = createSlice({
       }
       return;
     },
-
-    reset: (draft) => {
-      draft.status = "void"
-      draft.error = null
-      draft.data = null
-    }
   },
 });
-
-export const resetToken = createAction("token/reset")
 
 export default reducer;

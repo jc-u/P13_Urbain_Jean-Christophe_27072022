@@ -6,8 +6,7 @@ import UserHeader from "../components/UserHeader";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchOrUpdateUser } from "../redux/features/getUser";
-import { selectToken } from "../redux/utils/selectors";
-import { selectUser } from "../redux/utils/selectors";
+import { selectToken, selectUser } from "../redux/utils/selectors";
 
 const User = () => {
   const token = useSelector(selectToken);

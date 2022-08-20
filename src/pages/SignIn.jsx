@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchOrUpdateToken } from "../redux/features/getToken";
+import { fetchOrUpdateToken, resetToken } from "../redux/features/getToken";
 import { selectToken } from "../redux/utils/selectors";
 import { useNavigate } from "react-router-dom";
 
@@ -20,8 +20,11 @@ const SignIn = () => {
 
   useEffect(() => {
     if (token.data?.status === 200) navigate("/user");
-    if (token.data?.status === 400) alert(token.data.message);
-  }, [token, navigate]);
+    if (token.data?.status === 400) {
+      alert(token.data.message);
+      dispatch(resetToken());
+    }
+  }, [token, navigate, dispatch]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

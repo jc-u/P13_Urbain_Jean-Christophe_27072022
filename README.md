@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/src/assets/argentBankLogo.png" width="500px"alt="logo"/>
+  <img src="./src/assets/argentBankLogo.png" width="500px"alt="logo"/>
 </p>
 
 ---

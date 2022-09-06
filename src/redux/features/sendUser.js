@@ -25,7 +25,7 @@ export function sendEditedUserNames(token, editedUserNames) {
         body: JSON.stringify(editedUserNames),
       });
       const data = await response.json();
-      dispatch(actions.resoldved(data));
+      dispatch(actions.resolved(data));
     } catch (error) {
       dispatch(actions.rejected(error));
     }

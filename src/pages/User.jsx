@@ -11,7 +11,7 @@ import { selectToken, selectUser } from "../redux/utils/selectors";
 const User = () => {
   const token = useSelector(selectToken);
   const user = useSelector(selectUser);
-  console.log(user);
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchOrUpdateUser(token));

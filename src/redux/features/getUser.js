@@ -24,7 +24,7 @@ export function fetchOrUpdateUser(token) {
         },
       });
       const data = await response.json();
-      dispatch(actions.resoldved(data));
+      dispatch(actions.resolved(data));
     } catch (error) {
       dispatch(actions.rejected(error));
     }
@@ -51,7 +51,7 @@ const { actions, reducer } = createSlice({
       }
       return;
     },
-    resoldved: (draft, action) => {
+    resolved: (draft, action) => {
       if (draft.status === "pending" || draft.status === "updating") {
         draft.data = action.payload;
         draft.status = "resolved";

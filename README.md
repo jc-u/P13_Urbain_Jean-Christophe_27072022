@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/jc-u/P13_Urbain_Jean-Christophe_27072022/src/assets/argentBankLogo.png" width="500px"alt="logo"/>
+  <img src="[https://github.com/jc-u/P13_Urbain_Jean-Christophe_27072022/src/assets/argentBankLogo.png](https://github.com/jc-u/P13_Urbain_Jean-Christophe_27072022/blob/master/src/assets/img/argentBankLogo.png)" width="500px"alt="logo"/>
 </p>
 
 ---

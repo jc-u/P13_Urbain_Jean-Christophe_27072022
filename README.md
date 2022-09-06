@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+<p align="center">
+  <img src="/src/assets/argentBankLogo.png" width="500px"alt="logo"/>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
+[![](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](/)
+[![](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://fr.reactjs.org/)
+[![](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)](https://reactrouter.com/)
+[![](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com)
+[![](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)](https://code.visualstudio.com/)
+---
 
-## Available Scripts
+# ArgentBank
+A banking app with auth<br/>
+Created with React App and Redux - Redux Toolkit
 
-In the project directory, you can run:
+### Dependencies
 
-### `npm start`
+- [React](https://fr.reactjs.org/) v18.2.0
+- [React-dom](https://www.npmjs.com/package/react-dom) v18.2.0
+- [React-router-dom](https://v5.reactrouter.com/web/guides/quick-start) v6.3.0
+- [FontAwesome](https://fontawesome.com/) v5.15.4
+- [Redux-JS-Toolkit](https://redux-toolkit.js.org/) v1.8.3
+- [React-Redux](https://redux.js.org/) v8.0.2
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1 | Back-end
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Download or clone the back-end's repository :
 
-### `npm test`
+```sh
+git clone (https://github.com/MarineHgns/Project-10-Bank-API.git)
+```
+2. Run the following commands:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+# Install dependencies
+npm install
+# Start local dev server
+npm run dev:server
+# Populate database with two users
+npm run populate-db
+```
 
-### `npm run build`
+Your server should now be running at http://locahost:3001 and you will now have two users in your MongoDB database!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Populated Database Data
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Once you run the `populate-db` script, you should have two users in your database:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Tony Stark
 
-### `npm run eject`
+- First Name: `Tony`
+- Last Name: `Stark`
+- Email: `tony@stark.com`
+- Password: `password123`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Steve Rogers
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- First Name: `Steve`,
+- Last Name: `Rogers`,
+- Email: `steve@rogers.com`,
+- Password: `password456`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## API Documentation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To learn more about how the API works, once you have started your local environment, you can visit: http://localhost:3001/api-docs
 
-## Learn More
+## Design Assets
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Static HTML and CSS has been created for most of the site and is located in: `/designs`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+For some of the dynamic features, like toggling user editing, there is a mock-up for it in `/designs/wireframes/edit-user-name.png`.
 
-### Code Splitting
+And for the API model that you will be proposing for transactitons, the wireframe can be found in `/designs/wireframes/transactions.png`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 2 | Front-end
 
-### Analyzing the Bundle Size
+1. Install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```sh
+# NPM
+npm install
+```
 
-### Making a Progressive Web App
+3. Launch dev server on port 3000 :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```sh
+# NPM
+npm run start
+```
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. Front-end is now rendered at URL `http://localhost:3000` and you can navigate on the site.

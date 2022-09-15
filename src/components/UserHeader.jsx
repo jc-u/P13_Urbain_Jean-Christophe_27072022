@@ -10,15 +10,15 @@ const UserHeader = ({ firstNameUser, lastNameUser }) => {
   const [editedLastName, seteditedLastName] = useState("");
   const editedUserNames = { firstName: editedFirstName, lastName: editedLastName };
   const token = useSelector(selectToken);
+
   const dispatch = useDispatch();
-
   const RefreshPage = () => {
-    dispatch(fetchOrUpdateUser(token))
-  }
-
+    dispatch(fetchOrUpdateUser(token));
+  };
   const handleSubmit = () => {
     dispatch(sendEditedUserNames(token, editedUserNames));
     setTimeout(RefreshPage, 50);
+
     setEdit(false);
   };
   return (
